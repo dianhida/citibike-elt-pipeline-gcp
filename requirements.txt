@@ -1,0 +1,19 @@
+#
+# Python dependencies for `ingestion/` and (optionally) local dbt runs.
+#
+# This repo includes a local virtualenv at `.venv/` and these pins match
+# the versions currently installed there (see: `pip freeze`).
+#
+# Recommended install:
+#   python -m venv .venv
+#   source .venv/bin/activate
+#   pip install -r requirements.txt
+#
+requests==2.33.0
+python-dotenv==1.2.2
+google-cloud-storage==3.1.1
+google-cloud-bigquery==3.40.1
+
+# dbt (optional locally; Airflow installs dbt-bigquery in-container)
+dbt-core==1.11.7
+dbt-bigquery==1.11.1

@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_trips
+    description: "Fact table for CitiBike trips"
+    columns:
+      - name: trip_date
+        tests:
+          - not_null
+
+      - name: rideable_type
+        tests:
+          - not_null
+
+      - name: trip_duration_sec
+        description: "Duration of trip in seconds"

@@ -1,0 +1,14 @@
+citibike_dbt:
+  outputs:
+    dev:
+      dataset: citibike
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /opt/airflow/keys/my-creds.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: citibike-zoomcamp
+      threads: 4
+      type: bigquery
+  target: dev

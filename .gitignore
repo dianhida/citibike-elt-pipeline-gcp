@@ -205,3 +205,59 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# -----------------------------------------------------------------------------
+# Terraform — local download cache + state (very large / sensitive)
+# -----------------------------------------------------------------------------
+# Provider plugins and modules live here; can be hundreds of MB per workspace.
+.terraform/
+
+# State often contains resource metadata and secrets; use remote backend in production.
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+
+# Debug / crash output from the Terraform CLI
+crash.log
+crash.*.log
+
+# Variable files often hold secrets; commit *.tfvars.example instead if needed.
+*.tfvars
+*.tfvars.json
+
+# Local override files (not for version control)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI config files that may reference credentials
+.terraformrc
+terraform.rc
+
+# Keep committed for reproducible provider versions: .terraform.lock.hcl
+
+# -----------------------------------------------------------------------------
+# dbt — generated artifacts (large / reproducible from models)
+# -----------------------------------------------------------------------------
+dbt/**/target/
+dbt/**/logs/
+dbt/**/dbt_packages/
+
+# dbt local user / IDE metadata (not for sharing)
+dbt/**/.user.yml
+
+# If you ever run dbt from repo-root `dbt/` with log-path elsewhere, catch stray logs
+dbt/dbt.log
+
+# -----------------------------------------------------------------------------
+# Ingestion — local downloads / extracts (ZIP + CSV can be multi‑GB; never commit)
+# -----------------------------------------------------------------------------
+ingestion/data/*
+!ingestion/data/.gitkeep
+
+# project specific
+.env
+my-creds.json
+*.pem
+*.key

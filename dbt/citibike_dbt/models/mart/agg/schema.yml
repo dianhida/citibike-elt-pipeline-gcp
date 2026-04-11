@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: agg_trips_by_month
+    description: "Monthly aggregated trips by bike type"
+    columns:
+      - name: trip_month
+        tests:
+          - not_null
+
+  - name: agg_trips_by_type
+    description: "Trips aggregated by bike type"
+    columns:
+      - name: rideable_type
+        tests:
+          - not_null
