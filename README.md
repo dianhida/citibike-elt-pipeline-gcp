@@ -421,7 +421,7 @@ Connect Looker Studio to the BigQuery tables in the `mart` schema/dataset and bu
 
 Add your dashboard link here:
 
-- **Looker Studio dashboard**: *https://lookerstudio.google.com/reporting/920196de-d967-4527-acba-ad8c73d8b24d*
+- **Looker Studio dashboard**: *https://datastudio.google.com/reporting/920196de-d967-4527-acba-ad8c73d8b24d*
 
 ---
 
