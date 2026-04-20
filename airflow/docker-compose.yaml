@@ -15,7 +15,7 @@ x-airflow-common: &airflow-common
     GCP_PROJECT_ID: citibike-zoomcamp
     GCS_BUCKET: citibike-data-lake-zoomcamp
     BASE_URL: https://s3.amazonaws.com/tripdata
-    MONTHS: 202501,202502,202503,202504,202505,202506,202507,202508,202509,202510,202511,202512
+    MONTHS: 202401,202402,202403,202404,202405,202406,202407,202408,202409,202410,202411,202412
 
     # 🔥 install dependencies
     _PIP_ADDITIONAL_REQUIREMENTS: >
